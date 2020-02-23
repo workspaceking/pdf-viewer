@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studyapp.controllers.AppController">
+   <children>
+      <VBox alignment="TOP_RIGHT">
+         <children>
+            <Button fx:id="browseDirectory" maxHeight="0.0" minHeight="0.0" mnemonicParsing="false" onAction="#browserDirectory" text="Browse Study Material" visible="false">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <TreeView fx:id="fileExplorer" prefWidth="248.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+      <VBox prefHeight="435.0" prefWidth="500.0" HBox.hgrow="ALWAYS">
+         <children>
+            <BorderPane fx:id="pdfContainer" VBox.vgrow="ALWAYS">
+               <center>
+                  <Accordion fx:id="contentView" BorderPane.alignment="CENTER">
+                    <panes>
+                      <TitledPane fx:id="pdfView" animated="false" text="PDF" />
+                      <TitledPane fx:id="video" animated="false" text="Video | Content" />
+                    </panes>
+                  </Accordion>
+               </center></BorderPane>
+         </children>
+      </VBox>
+   </children>
+</HBox>
